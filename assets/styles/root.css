@@ -1,0 +1,45 @@
+:root{
+    /* Colors */
+    --body-color: #fff;
+    --titles-color: #000000;
+    --hover-violet: #BF6DE0;
+    --hover-light-violet: #c289de;
+    --dark-color: #11101D;
+    --hover-red: #E06D6D;
+    --hover-green: #6DE071;
+    --margin-hover: #FF983F;
+    --text-color-icons: #707070;
+    --primary-color-light: #f6f5ff;
+    --borders: rgba(112, 112, 112, .3);
+    --black-btn: #0e1217;
+    --box-shadow :rgba(149, 157, 165, 0.2);
+    --rgba-input : rgba(0, 0, 0, 0.2);
+
+    /* transition */
+    --tran-01: all 0.1s ease;
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+
+
+    /* border rad */
+    --border-radius-btn: 4px;
+    --border-radius-img: 10px;
+
+    /* icons size */
+    --icon-size-btn: 19px
+}
+
+.darkmode{
+    --body-color: #11101D;
+    --titles-color: #fff;
+    --hover-violet: #BF6DE0;
+    --hover-red: #E06D6D;
+    --hover-green: #6DE071;
+    --margin-hover: #FF983F;
+    --text-color-icons: #eeeeee;
+    --primary-color-light: #11101D;
+    --box-shadow : #000000;
+    --rgba-input : rgb(255, 255, 255);
+}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="input-main">
+		<div class="">
+			{{ form(searchForm) }}
+			</div>
+		</div>
+
+
+		{% if is_granted("ROLE_USER") %}
+			<div class="crud-section-btn">
+				<div>
+					<a role="button" class="btn btn-primary add-btn add-btn-main" href="{{ path('articles_new') }}">Add article</a>
+				</div>
+			</div>
+		{% endif %}
+		<section class="main-section">
+{#			{% for article in articles|sort((a,b)=>b.posted > a.posted) %}#}
+			{% for article in articles%}
+				{#|slice(0, 3)#}
+				<div class="cards">
+					{% if  article.coverImageName is not null %}
+						<img src="{{ vich_uploader_asset(article, 'coverImageFile') }}" alt="game image">
+					{% endif %}
+					{% if  article.coverImageName is null %}
+						<img src="{{ asset('build/images/no image.png') }}" alt="game image">
+					{% endif %}
+					<div class="date">Posted
+						{{ article.posted|date('d-m-Y') }}
+						by
+						<span>{{ article.user.nickname }}</div>
+						<h2>{{ article.title|u.truncate(50, '...', false)|raw }}</h2>
+						<div class="btn-explore">
+							<a class="btn-explore-link" href="{{ path('articles_detail', {id: article.id, title: article.title}) }}">Explore</a>
+						</div>
+					</div>
+				{% endfor %}
+			</section>
+
+		{% endblock %}

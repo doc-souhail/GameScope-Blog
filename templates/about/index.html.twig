@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<section class="about-section">
+    <h1>About GAME.SCOPE</h1>
+    <div class="about-paragraphe">
+    <p>
+        Fan of gaming and more particularly of FPS, or First Person Shooter (like CS GO or
+        Valorant) and story games (like the Assassin's Creed series), I decided to use this
+        theme to create my exam project.<br>
+        So I developed a web and mobile web application that allows each user to
+        create an account and then share articles about the gaming world, such as the site
+        “IGN” (“Game Informer”).
+        The user can also use a forum linked with GitHub in order to exchange with
+        other enthusiasts and suggest if there are any changes to add to the site or alert on
+        bugs to fix.
+        This project is inspired by communication platforms like Twitter and Reddit or the
+        Twitch streaming platform.
+        Initially, GAME.SCOPE will offer the core publishing functionality
+        of items. <br>
+        The user can of course modify or delete his own publications.
+        The administrator, meanwhile, will be able to act on both user accounts and their
+        publications, in creation/reading/modification/deletion (or CRUD in English).
+        v2 plans to develop a UGC (User Generated Content): each user post
+        may be up voted or down voted. Clearly, an up vote will raise a publication in the
+        ranking, a down vote will bring it down and lose it in the limbo of the site. Additionally, a
+        comments system will be added
+    </p>
+    </div>
+    <div class="question-about">
+        <h2>How can we make GAME.SCOPE better?</h2>
+    </div>
+    <div class="github-discussions">
+    <div class="request">
+        <span class="emoji">🤔</span>
+        <h2>Feature request</h2>
+        <p>if you have an idea of features
+        share it on Github discussion
+        </p>
+        <a href="https://github.com/doc-suell/game.scope/discussions/categories/feature-request" target="_blank">Request</a>
+    </div>
+        <div class="bugs">
+            <span class="emoji">🐜</span>
+            <h2>Report a bug</h2>
+            <p>you found a bug please contact us to fix it</p>
+            <a href="https://github.com/doc-suell/game.scope/discussions/categories/report-a-bug" target="_blank" >Report</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

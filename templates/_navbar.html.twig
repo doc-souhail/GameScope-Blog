@@ -1,0 +1,84 @@
+<div class="header_nav">
+    <div class="menu-btn-container">
+        <div class="menu-btn toggle">
+            <div class="menu-btn_burger"></div>
+        </div>
+    </div>
+    <div><img id="main_logo" class="main_logo" src="{{ asset('build/images/game-scope-tranparent.png') }}" alt="game-scope_logo"></div>
+    {% if app.user %}
+
+{#        <div id="welcome-popup" class="welcome">Hello 🖐{{ app.user.nickname }}</div>#}
+        <div class="right-container">
+            <div class="dropdown text-end">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                    {% if app.user.profileImageName %}
+                        <img src="{{ vich_uploader_asset(app.user, 'profileImageFile') }}" alt="" width="32" height="32" class="rounded-circle">
+                    {% else %}
+                        Hello {{ app.user.nickname }}
+                    {% endif %}
+                </a>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                    <a class="dropdown-item" href="{{ path('profile_edit') }}">Profil edit</a>
+                    {% if is_granted('ROLE_ADMIN')%}
+                            <a class="dropdown-item" href="{{ path('app_user')}}">Dashboard</a>
+                    {% endif %}
+                    <a class="dropdown-item" href="{{ path('app_logout') }}">Logout</a>
+                </ul>
+            </div>
+        </div>
+    {% else %}
+        <a class="log-btn login-btn" href="{{ path('app_login')}}">Access all features</a>
+    {% endif %}
+
+</div>
+<nav class="sidebar close">
+<div class="menu-bar">
+    <div class="menu">
+        <div>
+        <ul class="menu-links">
+            <li class="nav-link">
+                <a href="{{ path('app_main') }}">
+                    <i class="icon fa-solid fa-house"></i>
+                    <span class="text nav-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="https://discord.gg/J9dbrpAB " target="_blank"
+                ><i class="icon fa-brands fa-discord"></i>
+                    <span class="text nav-text">Discord</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="{{ path('app_faq')}}"
+                ><i class="icon fa-solid fa-lightbulb bull"></i>
+                    <span class="text nav-text">FAQ</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="{{ path('app_privacy_security')}}"
+                ><i class="terms-icon icon fa-solid fa-file-contract"></i>
+                    <span class="terms-icon text nav-text">Terms</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="{{ path('app_about') }}"
+                ><i class="icon lightning-icon fa-solid fa-bolt-lightning"></i>
+                    <span class="text nav-text">About</span>
+                </a>
+            </li>
+            <li class="mode">
+                <div class="moon-sun">
+                    <div id="sun-btn" class="sun-btn"><i class="fa-solid fa-sun"></i></div>
+                    <div id="moon-btn" class="moon-btn"><i class="fa-solid fa-moon"></i></div>
+                </div>
+                <span id="mode-text" class="text">Light Mode</span>
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>
+    <div id="btn-back-to-top"><i class="fa-solid fa-xl fa-angle-up btn-back-to-top"></i></div>
+</nav>
+
+
+

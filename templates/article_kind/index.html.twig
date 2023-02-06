@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container mt-5 btn-add-type">
+        <div class="row">
+            <div class="col text-center">
+                <a role="button" class="btn btn-primary add-btn add-new-type-btn" href="{{path('articleKind_new')}}">Add New Types</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive text-nowrap table-sm users-table">
+    <table class="users-table table  .table-responsive table-hover">
+        <thead class="bg-info ">
+        <th>id</th>
+        <th>type</th>
+        <th></th>
+        </thead>
+        <tbody>
+        {%for articleKind in articleKinds%}
+            <tr>
+                <td>
+                    {{ articleKind.id }}
+                </td>
+                <td>
+                    {{ articleKind.kind}}
+                </td>
+                <td class="text-end">
+                    <a role="button" class="btn btn-warning btn-types" href="{{ path('articleKind_edit', {id: articleKind.id})}}">Edit
+{#                        <i class="fa fa-pen text-primary"></i>#}
+                    </a>
+                    <a role="button" class="btn btn-danger btn-types" href="{{ path('articleKind_delete', {id: articleKind.id})}}" onclick="return confirm('Are you sure?')">Delete
+{#                        - <i class="fa fa-trash text-danger"></i>#}
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+{% endblock %}

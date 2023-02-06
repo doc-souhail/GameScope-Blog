@@ -1,0 +1,35 @@
+.crud-section-btn{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 30px auto 0 auto;
+}
+
+.crud-section {
+    width: 60%;
+    margin: 30px auto 0 auto;
+}
+
+.alert{
+    width: 60%;
+    margin: 50px auto 50px auto;
+}
+
+
+.users-table{
+    width: 60%;
+    margin: 50px auto;
+}
+
+.users-settings{
+    width: 60%;
+    margin: 100px auto;
+}
+
+
+td{
+    color: var(--titles-color);
+}
+
+
+

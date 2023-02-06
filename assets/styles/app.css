@@ -1,0 +1,1045 @@
+@import "reset.css";
+@import "root.css";
+@import "fonts.css";
+@import "backoffice.css";
+@import "crud.css";
+
+
+body{
+    font-family: poppins, sans-serif;
+    color: var(--text-color-icons);
+    background: var(--body-color);
+    transition: var(--tran-05);
+}
+
+/* ------------------------------------ MANU BURGER ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+.menu-btn-container{
+    margin-top: 18px;
+}
+.menu-btn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+
+
+.menu-btn_burger{
+    width: 30px;
+    height: 4px;
+    background: var(--text-color-icons);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before,
+.menu-btn_burger::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: var(--text-color-icons);
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+
+}
+
+.menu-btn_burger::before{
+    top: 6px;
+    transform: translateY(-16px);
+}
+
+.menu-btn_burger::after{
+    top: -6px;
+    transform: translateY(16px);
+}
+
+/* ANIMATION */
+
+.menu-btn.open .menu-btn_burger{
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn_burger::before{
+    transform: rotate(38deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after{
+    transform: rotate(-38deg) translate(35px, 35px);
+}
+
+/* ------------------------------------ LOGIN BTN ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+.login{
+    padding-right: 4px;
+}
+
+.logout-btn:hover{
+    background-color: var(--hover-red);
+    color: var(--body-color) !important;
+}
+
+.log-btn{
+    background: var(--hover-violet);
+}
+
+.login-btn:hover{
+    box-shadow: 0px 0px 21px -7px #000000;
+    color: var(--body-color) !important;
+}
+
+
+.log-btn{
+    transition: var(--tran-02);
+    border-radius: 13px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--body-color);
+}
+
+.welcome{
+    position: absolute;
+    right: 234px;
+    top: -12px;
+    color: var(--body-color);
+    background-color: var(--hover-violet);
+    padding: 20px 15px 7px 15px;
+    border-radius: 0px 0px 13px 13px;
+    transition: var(--tran-05);
+}
+
+.showpop{
+    top: -50px;
+    transition: var(--tran-05);
+}
+
+/* ------------------------------------ LOGIN FORM ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+.login-form{
+    width: 60%;
+    margin: 100px auto;
+    font-family: robot-mono, sans-serif;
+    font-weight: 500;
+}
+
+.login-elements{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-elements input{
+    width: 50%;
+    height: 40px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid rgba(0,0,0, 0.1);
+    border-radius: var(--border-radius-btn);
+}
+
+.login-elements input:focus{
+    border: 2px solid rgba(255, 155, 26, 0.4);
+    /*background-color: #fff;*/
+}
+
+
+::placeholder{
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.login-form h1{
+    text-align: center;
+    font-size: 40px;
+}
+
+.login-form p{
+    text-align: center;
+    font-size: 15px;
+    font-family: roboto;
+    margin-top: 10px;
+}
+
+
+.login-form a{
+    color: var(--hover-violet);
+}
+
+.login-elements button{
+    padding: 10px 50px;
+    margin-top: 30px;
+    background: var(--hover-violet);
+    color: var(--body-color);
+    border: none;
+    border-radius: var(--border-radius-btn);
+}
+
+.login-elements button:hover{
+    background: var(--hover-light-violet);
+}
+
+/*.login-elements input{*/
+/*    background-color: var(--body-color);*/
+
+/*}*/
+/*.login-elements input::placeholder{*/
+/*    color: #fff;*/
+/*}*/
+
+
+
+/* ------------------------------------ REGISTER FORM ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+
+
+.register-container{
+    width: 60%;
+    margin: 100px auto;
+    font-family: robot-mono, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-header{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.input-register{
+    height: 40px;
+    margin-top: 30px;
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid rgba(0,0,0, 0.1);
+    border-radius: var(--border-radius-btn);
+}
+.input-register:focus{
+    border: 2px solid rgba(255, 155, 26, 0.4);
+}
+
+.terms{
+    margin-top: 2px;
+}
+
+.register-btn{
+    padding: 10px 50px;
+    margin-top: 30px;
+    background: var(--hover-violet);
+    color: var(--body-color);
+    border: none;
+    border-radius: var(--border-radius-btn);
+}
+
+.register-btn:hover{
+    background: var(--hover-light-violet);
+}
+
+
+
+
+/* ------------------------------------ HEADER NAV ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+.header_nav{
+    position: relative;
+    z-index: 1;
+    background: var(--body-color);
+    padding: 5px 20px ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    border-bottom: 1px solid rgba(112, 112, 112, .3);
+}
+
+.header_nav>div>img{
+    width: 140px;
+    margin-left: 70px;
+}
+
+
+
+/* ------------------------------------ SIDE BARE ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+.sidebar{
+    position: absolute;
+}
+
+.sidebar .menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(95% - 75px);
+}
+
+.sidebar.close{
+    width: 70px;
+}
+.sidebar.close .text{
+    display: none;
+}
+
+
+.sidebar{
+    background: var(--body-color);
+    z-index: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 220px;
+    border-right: 1px solid rgba(112, 112, 112, .3);
+    transition: var(--tran-02);
+    padding-top: 150px;
+}
+
+.sidebar li {
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 11px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon{
+    margin-right: 20px;
+    font-size: 20px;
+    padding-left: 2px;
+}
+
+.sidebar li .icon,
+.sidebar li .text{
+    color: var(--text-color-icons);
+    transition: var(--tran-02);
+}
+
+.sidebar li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li a {
+    width: 100%;
+    padding: 9px;
+    border-radius: var(--border-radius-btn);
+    display: flex;
+    align-items: center;
+    transition: var(--tran-04);
+}
+
+.sidebar li a:hover{
+    background: var(--hover-violet);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--body-color);
+}
+
+.nav-link .bull{
+    margin-left: 3px;
+}
+
+.dashboard-icon{
+    margin-left: 2px;
+}
+.moon-btn, .sun-btn{
+    margin-left: 6px;
+    /*position: absolute;*/
+    cursor: pointer;
+    /*right: 190px;*/
+    /*top: 14px;*/
+    background: rgba(210, 210, 210, 0.2);
+    padding: 9px 9px;
+    border-radius: 50%;
+    z-index: 100;
+    color: var(--text-color-icons);
+}
+
+.moon-btn{
+    display: none;
+}
+
+.moon-sun{
+    padding-right: 3px;
+}
+
+.lightning-icon{
+    margin-left: 5px;
+}
+.terms-icon{
+    margin-left: 5px;
+}
+/* ------------------------------------ MAIN PAGE ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+.main-section{
+    /*border-right: 1px solid var(--borders);*/
+    width: 90%;
+    padding-top: 50px;
+    margin-left: 115px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+
+
+.cards{
+    overflow: hidden;
+    border-radius: 7px;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    border: 1px solid var(--borders);
+    height: 340px;
+    width: 320px;
+    color: var(--text-color-icons);
+    box-shadow: var(--box-shadow) 0px 8px 24px 0px;
+}
+
+.cards img{
+    display: block;
+    width: 100%;
+    height: 52%;
+    object-fit: cover;
+}
+
+.cards:hover{
+    /*box-shadow: -2px 2px 0px rgb(196 181 253);*/
+
+}
+
+.cards h2{
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-left: 6px;
+    margin-top: 24px;
+    line-height: 21px;
+}
+
+.cards .date{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 10px;
+    color: rgba(112, 112, 112, .4);
+}
+
+.btn-explore-link {
+    font-size: 12px;
+    margin-left: 32%;
+    padding: 10px 30px;
+    border-radius: var(--border-radius-btn);
+    background: var(--hover-violet);
+    color: var(--body-color);
+    transition: all .4s ease;
+}
+
+
+
+.btn-explore-link:hover {
+    background: var(--hover-light-violet);
+    color: var(--body-color);
+    /*box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;*/
+}
+
+.input-main{
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.search-input{
+    padding: 5px 15px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid rgba(161 , 161, 161, .1);
+    background: rgba(112, 112, 112, .1);
+    /*width: 60%;*/
+}
+
+
+
+
+/* ------------------------------------ SINGLE ARTICLE  ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+
+.single-article{
+    border-right: 1px solid var(--borders);
+    width: 80%;
+    margin: auto;
+    padding-bottom: 100px;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.single-article h1{
+    line-height: 27.2px;
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    margin-bottom: 40px;
+    color: var(--titles-color);
+    font-family: roboto;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.single-article img{
+    width: 80%;
+    border-radius: var(--border-radius-img);
+    margin: 15px auto;
+}
+.single-article p{
+    width: 80%;
+    margin: auto;
+    font-family: newsreader;
+    font-size: 20px;
+    color: var(--titles-color);
+    line-height: 35px;
+    text-align: left;
+}
+
+.single-article .date{
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    color: rgba(112, 112, 112, .4);
+}
+
+.image_input{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+/* ------------------------------------ BTN BACK TO TOP  ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+.btn-back-to-top{
+    padding: 22px 14px;
+    background-color: var(--titles-color);
+    color: var(--body-color);
+    border-radius: 50%;
+
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 0.1s;
+    display: none;
+
+}
+
+.btn-back-to-top:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+
+
+/* ------------------------------------ ABOUT PAGE  ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+
+.about-section{
+    border-right: 1px solid var(--borders);
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px;
+}
+
+
+
+.about-section h1{
+    font-family: roboto;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--titles-color);
+    margin-bottom: 20px;
+}
+
+.about-paragraphe{
+    margin: 0 auto;
+    width: 60%;
+    line-height: 50px;
+}
+
+.about-paragraphe p{
+    font-family: roboto;
+    font-size: 20px;
+    color: var(--titles-color);
+    text-align: justify;
+
+}
+
+.question-about h2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: roboto;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--titles-color);
+}
+
+.emoji{
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+
+.github-discussions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.github-discussions h2{
+    color: var(--titles-color);
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+.github-discussions p{
+    margin: 0 auto;
+    width: 80%;
+
+}
+
+.request, .bugs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--borders) ;
+    width: 300px;
+    height: 240px;
+    margin: 50px;
+    border-radius: var(--border-radius-btn);
+}
+
+.github-discussions a{
+    width: 100px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: var(--border-radius-btn);
+    background: var(--hover-violet);
+    color: var(--body-color);
+}
+
+.github-discussions a:hover{
+    background: var(--hover-light-violet);
+}
+
+/*.add-new-type-btn{*/
+/*    margin-left: 20px;*/
+/*}*/
+
+
+/* ------------------------------------ FAQ PAGE  ------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+
+
+.faq-section{
+    border-right: 1px solid var(--borders);
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.questions{
+    width: 80%;
+    text-align: justify;
+    margin-left: 43px;
+    margin-right: 50px;
+}
+
+.faq-section h1{
+    font-size: 50px;
+    font-weight: 900;
+    font-family: roboto;
+    margin-bottom: 40px;
+    color: var(--titles-color);
+}
+
+.faq-section h2{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: roboto;
+    color: var(--titles-color);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.faq-section h2:where(.services-policy){
+    font-size: 35px;
+    font-family: roboto;
+}
+
+.faq-buttons{
+    width: 150px;
+    margin: 100px auto 0 auto;
+    padding: 10px;
+    border-radius: var(--border-radius-btn);
+    background: var(--hover-violet);
+    color: var(--body-color);
+}
+
+.faq-buttons a{
+    color: var(--body-color);
+}
+
+.button-faq{
+    color: var(--body-color);
+}
+
+.faq-buttons:hover{
+    background: var(--hover-light-violet);
+}
+
+.add-new-tp{
+    width: 40%;
+    margin-left: 106px;
+    margin-top: 50px;
+}
+.add-new-tp>h1{
+    padding-bottom: 7px;
+}
+
+.form-check-label{
+    margin-top: 2px;
+}
+
+
+
+
+
+/* ---------------------- -------------- MEDIA QUERIES  --------------------------- --------- */
+/* ------------------------- -----------                --------------------------- --------- */
+
+
+
+
+
+@media screen and (max-width: 1150px) {
+    /* ------------------ DASHBOARD  ------------------ */
+    .users-table{
+        width: 90%;
+        margin-left: 38px;
+    }
+    /* ------------------ HEADER  ------------------ */
+    .header_nav>div>img{
+        width: 130px;
+    }
+    .welcome{
+        display: none;
+    }
+    /* ------------------ FAQ PAGE  ------------------ */
+
+    faq-section {
+        width: 85%;
+        margin-left: 65px;
+    }
+
+    .questions{
+        margin-left: 33px;
+    }
+    .faq-section h1{
+        font-size: 30px;
+    }
+    .emoji{
+        font-size: 40px;
+    }
+    /* ------------------ ABOUT PAGE  ------------------ */
+    .about-section h1{
+        font-size: 20px;
+    }
+
+    .about-paragraphe p{
+        font-size: 15px;
+    }
+    .question-about h2{
+        font-size: 16px;
+    }
+
+    .about-paragraphe{
+        width: 80%;
+    }
+
+    .github-discussions p{
+        font-size: 13px;
+    }
+    /* ------------------ MAIN PAGE  ------------------ */
+    .main-section{
+        justify-content: center;
+        width: 80%;
+    }
+    .search-input{
+        margin-left: 35px;
+    }
+}
+
+.add-btn{
+
+    background-color: var(--hover-violet) !important;
+    border: none;
+}
+
+@media screen and (max-width: 606px) {
+    /* ------------------ HEADER  ------------------ */
+    .header_nav>div>img{
+        width: 100px;
+    }
+    .header_nav{
+        padding: 10px 25px;
+    }
+    .main_logo{
+        display: none;
+    }
+
+    .log-btn{
+        font-size: 13px;
+    }
+    .form-control{
+        width: 80%;
+        /*background-color: var(--body-color);*/
+
+    }
+    /*td,tr, .btn-warning, .btn-danger, .btn-primary{*/
+    /*    font-size: 8px;*/
+    /*}*/
+    /*.add-btn{*/
+    /*    margin-left: 70px;*/
+
+    /*}*/
+
+    .edit-delete-btn{
+        margin-left: 18px;
+    }
+
+    /* ------------------ FAQ PAGE  ------------------ */
+
+    .faq-section{
+        border-right: none;
+        width: 85%;
+        margin-left: 55px;
+    }
+
+    .asked-questions{
+        font-size: 23px;
+    }
+
+    .faq-section h2:where(.services-policy) {
+        font-size: 20px;
+    }
+
+    .questions{
+        text-align: center;
+        margin-left: 33px;
+    }
+    .faq-section h1{
+        font-size: 30px;
+    }
+    .emoji{
+        font-size: 35px;
+    }
+
+
+    /* ------------------ PRIVACY PAGE  ------------------ */
+
+    .questions p{
+        font-size: 11px;
+    }
+
+    /* ------------------ ABOUT PAGE  ------------------ */
+
+    .about-section{
+        width: 95%;
+        border-right: none;
+        padding-top: 40px;
+    }
+
+    .about-section h1{
+        font-size: 30px;
+        margin-left: 50px;
+    }
+    .question-about h2{
+        width: 70%;
+        font-size: 30px;
+        margin-left: 85px;
+    }
+
+    .about-paragraphe{
+        width: 80%;
+    }
+    .about-paragraphe p{
+        font-size: 11px;
+        line-height: 32px;
+        margin-left: 46px;
+        text-align: center;
+    }
+
+    .github-discussions{
+        margin-left: 51px;
+    }
+
+    .request, .bugs{
+        width: 280px;
+        height: 230px;
+        margin: 20px;
+    }
+    .github-discussions{
+        font-size: 13px;
+    }
+    /* ------------------ ARTICLE DÉTAILLE   ------------------ */
+
+    .single-article {
+        width: 86%;
+        padding-top: 40px;
+    }
+    .single-article h1{
+        font-size: 20px;
+        margin-left: 65px;
+        margin-bottom: 15px;
+    }
+
+    .single-article .date{
+        margin-left: 65px;
+        font-size: 12px;
+    }
+
+    .single-article img{
+        margin-left: 65px;
+        margin-top: 15px;
+    }
+
+    .single-article p{
+        font-size: 13px;
+        margin-left: 65px;
+    }
+    .single-article{
+        border-right: none;
+
+    }
+
+
+    /* ------------------ MAIN PAGE  ------------------ */
+    .main-section{
+        width: 80%;
+        justify-content: center;
+        margin-left: 75px;
+        margin-right: 0;
+    }
+    .search-input{
+        /*width: 250px;*/
+        margin-left: 65px !important;
+    }
+    .cards{
+        width: 300px;
+        margin-right: 0;
+    }
+
+    /* ------------------ LOGIN AND REGISTER PAGE ------------------ */
+
+    .login-form{
+        padding-left: 30px;
+    }
+    .login-form h1{
+        font-size: 30px;
+    }
+    .login-elements input{
+        width: 100%;
+    }
+
+    .register-header{
+        padding-right: 50px;
+    }
+
+    .register-container{
+        width: 70%;
+        margin-left: 100px;
+    }
+    .form-check{
+        padding-right: 73px;
+    }
+    .register-btn{
+        padding: 10px 40px;
+        margin-top: 10px;
+        margin-right: 55px;
+    }
+    .users-table{
+        font-size: 10px;
+    }
+
+    .btn-types{
+        font-size: 8px;
+    }
+    .add-btn-main{
+        margin-left: 60px;
+    }
+
+    .btn-add-type{
+        margin-left: 30px;
+    }
+    .add-new-tp{
+        width: 60%;
+        margin-left: 106px;
+        margin-top: 50px;
+    }
+    .add-new-tp>h1{
+        padding-bottom: 7px;
+    }
+}
+
+.test-mehdi{
+    width: 40%;
+    margin: auto;
+}
+
+.container-mehdi{
+    width: 40%;
+    margin: auto;
+}
+
+
+.vich-image img{
+    width: 70%;
+}
+
+.edit-user{
+    margin-left: 76px;
+    width: 87%;
+}
+
+
+
+
+
+
+

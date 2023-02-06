@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <article class="single-article">
+        <div  class="mb-5 edit-delete-btn">
+            {% if app.user == articles.user or is_granted("ROLE_ADMIN")  %}
+            <a   role="button" class="btn btn-primary " href="{{ path('article_edit', {id: articles.id,}) }}">Edit article</a>
+            {% endif%}
+            {% if is_granted("ROLE_ADMIN") %}
+            <a  role="button" class="btn btn-danger " href="{{ path('article_delete', {id: articles.id,}) }}" onclick="return confirm('are you  sure?')">Delete article</a>
+            {% endif %}
+        </div>
+
+        <h1>{{ articles.title }}</h1>
+        <div class="date">Posted {{ articles.posted|date('d-m-Y') }} by <span>{{ articles.user.nickname }}</span></div>
+        <img src="{{ vich_uploader_asset(articles, 'coverImageFile') }}" alt="">
+        <p>{{ articles.text }}</p>
+    </article>
+{% endblock %}

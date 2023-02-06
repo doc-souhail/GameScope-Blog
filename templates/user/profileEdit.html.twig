@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="row">
+        <div class="col col-md-4">
+            {{ form_row(form.nickname) }}
+        </div>
+        <div class="col col-md-4">
+            {{ form_row(form.email) }}
+        </div>
+        <div class="col col-md-4">
+            {{form_row(form.profileImageFile)}}
+        </div>
+    </div>
+    {{ form_row(form.save) }}
+    {{ form_end(form) }}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+

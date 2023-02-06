@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <section class="crud-section container ">
+        {{ form_start(articleForm)}}
+        <div class="row">
+            <div>
+                {{form_row(articleForm.title)}}
+            </div>
+{#            <div>#}
+{#                {{form_row(articleForm.author)}}#}
+{#            </div>#}
+            <div>
+            {% if is_granted("ROLE_ADMIN") %}
+                <a  class="btn btn-primary add-btn " href="{{ path('article_kind_listing')}}">Add Types</a>
+            {% endif %}
+            </div>
+            <div>
+                {{form_row(articleForm.kinds)}}
+            </div>
+            <div>
+                {{form_row(articleForm.coverImageFile)}}
+            </div>
+            <div>
+                {{form_row(articleForm.text)}}
+            </div>
+        </div>
+        {{form_row(articleForm.save)}}
+        {{form_end(articleForm)}}
+    </section>
+
+{%endblock%}

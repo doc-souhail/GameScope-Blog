@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    <div class="row users-settings edit-user">
+        <div class="col col-md-4">
+            {{ form_row(form.nickname) }}
+        </div>
+        <div class="col col-md-4">
+            {{ form_row(form.email) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.roles)}}
+        </div>
+        <div class="col">
+            {{ form_row(form.save) }}
+        </div>
+    </div>
+
+    {{ form_end(form) }}
+
+{% endblock %}
+
+
+

@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{#{% set current = app.request.get('_route_params') %}#}
+{% block body %}
+{#    {% if app.user.id == current['id']%}#}
+    <section class="crud-section">
+        {{ form_start(articleForm) }}
+        <div class="row">
+            <div>
+                {{form_row(articleForm.title)}}
+            </div>
+{#            <div>#}
+{#                {{form_row(articleForm.author)}}#}
+{#            </div>#}
+            <div>
+                {{form_row(articleForm.kinds)}}
+            </div>
+            <div>
+                {{form_row(articleForm.coverImageFile)}}
+            </div>
+            <div>
+                {{form_row(articleForm.text)}}
+            </div>
+        </div>
+        {{form_row(articleForm.save)}}
+        {{form_end(articleForm)}}
+    </section>
+{%endblock%}
