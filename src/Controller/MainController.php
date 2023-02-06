@@ -115,6 +115,20 @@ class MainController extends AbstractController
             'id' => $id
         ]);
 
+
+        // Delete images from DIR public
+//        $images = $mainRepository->getImages();
+//
+//        if($images){
+//            foreach ($images as $image){
+//                $monImage = $this->getParameter("images_directory") . '/' . $image->getName();
+//
+//                if(file_exists($monImage)){
+//                    unlink($monImage);
+//                }
+//            }
+//        }
+
         $entityManager->remove($articles);
         $entityManager->flush();
 
