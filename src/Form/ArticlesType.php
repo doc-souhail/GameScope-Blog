@@ -50,7 +50,7 @@ class ArticlesType extends AbstractType
                 ],
                 'constraints' => [
                     new File([
-                        'maxSize' => '1024k',
+//                        'maxSize' => '1024k',
                         'mimeTypes' => [
                             'image/png',
                             'image/jpeg',
