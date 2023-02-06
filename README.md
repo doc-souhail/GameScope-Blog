@@ -1,6 +1,6 @@
 # Articles-Symfony-project
 
-![Design preview for the Sunnyside agency landing page coding challenge](public/build/images/game.scope-project.png)
+![GAME.SCOPE TEMPLATE](assets/images/game.scope-project.png)
 
 ## Bienvenu! 👋
 
