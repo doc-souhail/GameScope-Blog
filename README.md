@@ -35,9 +35,11 @@ If you want to contribute to the development of GAME.SCOPE or simply explore our
 4. Configure your database by modifying the .env file with your connection details.
 
 5. Create the database and run migrations:
+ ```bash
+ php bin/console doctrine:database:create
+```
 ```bash
-php bin/console doctrine:database:create
-php bin/console doctrine:migrations:migrate
+ php bin/console doctrine:migrations:migrate
 ```
 6. Start the Symfony server:
 
