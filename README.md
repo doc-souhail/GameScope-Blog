@@ -19,33 +19,32 @@ If you want to contribute to the development of GAME.SCOPE or simply explore our
 ### Steps to configure your local environment
 
 1. Clone this GitHub repository to your machine:
-   ```bash
-   git clone https://github.com/yourusername/gamescope.git
-   
-   ```
+ ```
+ git clone https://github.com/yourusername/gamescope.git
+ ```
 
 2. Navigate to the project directory:
-   ```bash
-   cd gamescope
-   ```
+```
+cd gamescope
+```
 3. Install PHP dependencies using Composer:
-     ```bash
-   composer install
-   ```
+```
+composer install
+```
 4. Configure your database by modifying the .env file with your connection details.
 
 5. Create the database and run migrations:
- ```bash
- php bin/console doctrine:database:create
+ ```
+php bin/console doctrine:database:create
 ```
-```bash
- php bin/console doctrine:migrations:migrate
+```
+php bin/console doctrine:migrations:migrate
 ```
 6. Start the Symfony server:
 
-   ```bash
-   symfony server:start
-   ```
+```
+symfony server:start
+ ```
 ###License
 
 This project is under the MIT license. Please refer to the LICENSE file for more information.
