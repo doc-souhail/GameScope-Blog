@@ -1,17 +1,51 @@
-# Articles-Symfony-project
+# Welcome to GAME.SCOPE 🎮
 
 ![GAME.SCOPE TEMPLATE](assets/images/game.scope-project.png)
 
-## Bienvenu! 👋
+GAME.SCOPE is a blog dedicated to the gaming community, designed for passionate gamers. Our goal is to create a platform where players can share their knowledge, discoveries, and passions for games. This README will guide you through the steps to find our blog online and set up a local development environment to contribute or explore our source code.
 
-**Le Projet** 🤔
 
-"Bienvenue sur GAME.SCOPE, un site web dédié à la communauté gaming. Notre site vous permet de partager et de découvrir des articles passionnants sur le monde du gaming. Nous avons conçu GAME.SCOPE en utilisant les dernières technologies, telles que Symfony, Twig, JavaScript et CSS, pour vous offrir une expérience de navigation fluide et intuitive.
+## Setting Up a Development Environment
 
-Notre objectif est de créer une communauté dynamique pour les passionnés de gaming, où les utilisateurs peuvent partager leurs connaissances et leur passion pour les jeux vidéo. Nous croyons que notre site sera un lieu de rencontre pour les joueurs et les créateurs de contenu.
+If you want to contribute to the development of GAME.SCOPE or simply explore our source code, here's how to set up a local development environment:
 
-Rejoignez-nous sur GAME.SCOPE et découvrez comment nous pouvons vous aider à rester à jour sur toutes les dernières tendances et nouveautés dans le monde du gaming. Nous sommes impatients de vous accueillir dans notre communauté en évolution permanente."
+### Prerequisites
 
-**Have fun building!** 🚀
+- PHP 7.4 or higher
+- Composer
+- Symfony CLI
+- MySQL or another database of your choice
+
+### Steps to configure your local environment
+
+1. Clone this GitHub repository to your machine:
+   ```bash
+   git clone https://github.com/yourusername/gamescope.git
+   
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd gamescope
+   ```
+3. Install PHP dependencies using Composer:
+     ```bash
+   composer install
+   ```
+4. Configure your database by modifying the .env file with your connection details.
+
+5. Create the database and run migrations:
+```bash
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
+```
+6. Start the Symfony server:
+
+   ```bash
+   symfony server:start
+   ```
+###License
+
+This project is under the MIT license. Please refer to the LICENSE file for more information.
 
 ## If you like it, do fork 🍴 and star ⭐
